@@ -1,0 +1,25 @@
+.Accordion {
+    max-width: 50%;
+}
+
+.Accordion--item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: skyblue;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.Accordion--item p {
+    flex: none;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
