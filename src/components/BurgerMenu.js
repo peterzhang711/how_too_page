@@ -5,10 +5,10 @@ function Hamburger() {
   return (
     <nav>
       <div className="BurgerMenu">
-				<i></i>
-				<i></i>
-				<i></i>
-			</div>
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
     </nav>
   );
 }

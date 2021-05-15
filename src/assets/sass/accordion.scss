@@ -1,25 +1,28 @@
 .Accordion {
-    max-width: 50%;
+  max-width: 50%;
 }
 
 .Accordion--item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: skyblue;
-    padding: 10px 20px;
-    margin-bottom: 15px;
-    cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: skyblue;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
 }
 
-.Accordion--item p {
-    flex: none;
+.Accordion p {
+  flex: none;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px -5px 20px rgba(50, 50, 50, 0.75);
 }
 
 .show {
-    display: block;
+  display: block;
 }
 
 .hide {
-    display: none;
+  display: none;
 }

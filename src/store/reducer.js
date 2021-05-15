@@ -10,7 +10,6 @@ export const initialState = {
     accordionData: [],
     reqPending: false,
     reqErrorMessage: '',
-    accordionContentToggle: false,
 }
 
 export const rootReducer = (state = initialState, action) => {
@@ -28,18 +27,21 @@ export const rootReducer = (state = initialState, action) => {
                 errorMessage: 'Oops 404 error'
             }
         case SHOW_HIDE_CONTENT:
+            const updateAccordionData = state.accordionData.map((item, index) => {
+                if (index === action.index) {
+                    return ({
+                        ...item,
+                        accordionContentToggle: !item.accordionContentToggle,
+                    });
+                } else {
+                    return item;
+                }
+            });
+            
             return {
                 ...state,
-                accordionContentToggle: !state.accordionContentToggle
-            }
-        case RIGHT_CLICK:
-            return {
-                currentPageIndex: state.currentPageIndex + 1
-            }
-        case LEFT_CLICK:
-            return {
-                currentPageIndex: state.currentPageIndex - 1
-            }
+                accordionData: updateAccordionData,
+            };
         default:
             return state
     }

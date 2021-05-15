@@ -1,33 +1,76 @@
 .container-fluid {
-    padding: 0;
-    position: relative;
+  padding: 0;
+  position: relative;
 }
 
 .buttons {
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    bottom: 10px;
-    right: 28px;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 10px;
+  right: 28px;
 }
 
 .buttons button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0!important;
-    margin: 0 5px;
-    background-color: grey;
-    border: none;
-    color: black;
-    cursor: pointer;
-  } 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 !important;
+  margin: 0 5px;
+  background-color: grey;
+  border: none;
+  color: black;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
 
-  .buttons button:hover {
-    //   transform: scaleY(1.2);
-        // padding: 3px 0;
-      color: black;
-      background-color: skyblue;
+.buttons button:hover {
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  transform: scale(1.25);
+
+  color: black;
+  background-color: skyblue;
+}
+
+.col-lg-8.col-md-12 {
+  background-image: url("https://cdn.shortpixel.ai/client/to_webp,q_lossy,ret_img,w_1080,h_675/https://www.shred-x.com.au/wp-content/uploads/2020/01/Clean-Desk-Policy.jpg");
+}
+
+
+@media only screen and (max-width: 999px) {
+  .BurgerMenu {
+    position: absolute;
+    top: 0;
   }
 
+  .col-lg-8.col-md-12 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: static;
+  }
+
+  .Accordion {
+    max-width: 100% !important;
+    padding: 10px;
+  }
+
+  .buttons {
+    position: static;
+    margin: 10px;
+    margin-bottom: 30px;
+  }
+
+  .Sidebar {
+    height: 120% !important;
+  }
+}

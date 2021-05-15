@@ -1,39 +1,40 @@
 .Sidebar {
-    padding-top: 50px;
-    padding-left: 30px;
-    color: #fff;
-    background: linear-gradient(to right, black, 90%, white);
-    height: 100vh;
+  padding-top: 50px;
+  padding-left: 30px;
+  color: #fff;
+  background: linear-gradient(to right, black, 90%, white);
+  height: 100vh;
 }
 
 .Sidebar--heading {
-    text-align: left;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .Sidebar--text {
-    text-align: left;
+  text-align: left;
 }
 
 .Sidebar--list {
-    list-style: none;
-    text-align: left;
-    padding-left: 0;
-    position: relative;
+  list-style: none;
+  text-align: left;
+  padding-left: 0;
+  position: relative;
 }
 
-.Sidebar--list::before{
-    content: '';
-    position: absolute;
-    // position: relative;
-    width: 5px;
-    height: 100%;
-    background-color: skyblue;
-    margin-right: 3px;
+.Sidebar--list::before {
+  content: "";
+  position: absolute;
+  // position: relative;
+  width: 5px;
+  height: 100%;
+  background-color: skyblue;
+  margin-right: 3px;
 }
 
 .Sidebar--list li {
-    margin-left: 10px;
+  margin-left: 10px;
 }
