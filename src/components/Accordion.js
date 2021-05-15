@@ -6,7 +6,8 @@ import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 function Accordion() {
   const contentContext = useContext(ContentContext);
   const toggleDispatch = contentContext?.dispatch;
-  const accordionData = contentContext?.state.accordionData;
+  const accordionData = contentContext.state.accordionData;
+
 
   return (
     <div className="Accordion" data-testid="Accordion-test">
@@ -16,7 +17,7 @@ function Accordion() {
               <div
                 key={index}
                 className="Accordion--item"
-                onClick={() => toggleDispatch({ type: "SHOW_HIDE_CONTENT",index, })}
+                onClick={() => toggleDispatch({ type: "SHOW_HIDE_CONTENT",index })}
               >
                 <h5>{item.title}</h5>
                 {item.accordionContentToggle ? (
