@@ -1,7 +1,5 @@
 import {
     SHOW_HIDE_CONTENT,
-    RIGHT_CLICK,
-    LEFT_CLICK,
     GET_ACCORDION_INFOS_FAILED,
     GET_ACCORDION_INFOS_SUCCESS,
 } from './actionTypes'
@@ -29,15 +27,15 @@ export const rootReducer = (state = initialState, action) => {
         case SHOW_HIDE_CONTENT:
             const updateAccordionData = state.accordionData.map((item, index) => {
                 if (index === action.index) {
-                    return ({
+                    return {
                         ...item,
                         accordionContentToggle: !item.accordionContentToggle,
-                    });
+                    }
                 } else {
                     return item;
                 }
+
             });
-            
             return {
                 ...state,
                 accordionData: updateAccordionData,

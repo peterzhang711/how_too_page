@@ -17,7 +17,7 @@ function Accordion() {
               <div
                 key={index}
                 className="Accordion--item"
-                onClick={() => toggleDispatch({ type: "SHOW_HIDE_CONTENT",index })}
+                onClick={() => toggleDispatch({ type: "SHOW_HIDE_CONTENT", index })}
               >
                 <h5>{item.title}</h5>
                 {item.accordionContentToggle ? (
