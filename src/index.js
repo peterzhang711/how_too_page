@@ -10,7 +10,13 @@ import NextPage from './components/NextPage'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App/>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={App}/>
+        <Route path="/previous" component={PreviousPage}/>
+        <Route path="/next" component={NextPage}/>
+      </Switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

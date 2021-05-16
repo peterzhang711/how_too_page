@@ -9,10 +9,12 @@ import Hamburger from "./components/BurgerMenu";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import axios from "axios";
+import { useHistory } from "react-router-dom"
 
 
 function App() {
   const [state, dispatch] = useReducer(rootReducer, initialState);
+  const history = useHistory();
 
   useEffect(() => {
     axios
@@ -25,6 +27,13 @@ function App() {
       });
   }, []);
 
+  const handleClickPrePage = () => {
+    history.push("previous")
+  }
+
+  const handleClickNextPage = () => {
+    history.push("next")
+  }
 
   return (
     <div className="App">
@@ -38,11 +47,11 @@ function App() {
               <Hamburger />
               <Accordion />
               <Row className="buttons">
-                <Button>
+                <Button onClick={handleClickPrePage}>
                   <MdKeyboardArrowLeft className="icon" />
                   Back
                 </Button>
-                <Button>
+                <Button onClick={handleClickNextPage}>
                   <MdKeyboardArrowRight className="icon" />
                   Next
                 </Button>
