@@ -5,7 +5,6 @@ import { rootReducer, initialState } from "./store/reducer";
 import Sidebar from "./components/Sidebar";
 import Accordion from "./components/Accordion";
 import Hamburger from "./components/BurgerMenu";
-import PreviousPage from "./components/PreviousPage";
 
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { Container, Row, Col, Button } from "react-bootstrap";
